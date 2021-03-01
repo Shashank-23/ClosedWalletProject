@@ -8,7 +8,7 @@
   infoln "Creating Orderer Org Identities"
 
     set -x
-    cryptogen generate --config=crypto-config-orderer.yaml --output="organizations"
+    cryptogen generate --config=crypto-config-orderer.yaml --output=../
     res=$?
     { set +x; } 2>/dev/null
     if [ $res -ne 0 ]; then
@@ -18,7 +18,7 @@
   infoln "Creating Org1 Identities"
 
  set -x
-    cryptogen generate --config=crypto-config-org1.yaml --output="organizations"
+    cryptogen generate --config=crypto-config-org1.yaml --output=../
     res=$?
     { set +x; } 2>/dev/null
     if [ $res -ne 0 ]; then
